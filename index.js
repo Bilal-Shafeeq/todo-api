@@ -29,6 +29,7 @@ app.get("/get-blogs", async (req, res) => {
     res.json({ blogs })
 })
 
+
 // Route 2 : Post the blog
 app.post("/post-blog", async (req, res) => {
 
