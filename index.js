@@ -16,6 +16,10 @@ app.use(cors())
 
 
 // Routes
+app.get("/", async (req, res) => {
+  res.send("Bilal api is running")
+})
+
 
 // Route 1 : Get all blogs
 app.get("/get-blogs", async (req, res) => {
