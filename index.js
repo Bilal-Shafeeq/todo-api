@@ -3,7 +3,6 @@ const cors = require("cors");
 const connectDb = require("./connection")
 const BlogPost = require("./models/BlogPost")
 const app = express();
-const port = 5000;
 
 
 // connect database
@@ -74,6 +73,9 @@ app.put("/update-blog/:id", async (req, res) => {
 })
 
 // Listen server
-app.listen(port, () => {
-    console.log(`Server is runing on port ${port}`);
+let port =  8000;
+let host =  "127.0.0.1";
+
+app.listen(port, host, () => {
+    console.log(`Server is running at http://${host}:${port}`);
 })
